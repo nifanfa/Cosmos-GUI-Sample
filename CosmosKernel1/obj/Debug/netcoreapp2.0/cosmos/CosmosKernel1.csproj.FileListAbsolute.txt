@@ -1,0 +1,9 @@
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\bin\Debug\netcoreapp2.0\cosmos\CosmosKernel1.deps.json
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\bin\Debug\netcoreapp2.0\cosmos\CosmosKernel1.dll
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\bin\Debug\netcoreapp2.0\cosmos\CosmosKernel1.pdb
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.csprojAssemblyReference.cache
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.AssemblyInfoInputs.cache
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.AssemblyInfo.cs
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.csproj.CoreCompileInputs.cache
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.dll
+C:\Users\nifan\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.pdb
