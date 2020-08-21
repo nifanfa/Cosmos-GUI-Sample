@@ -19,15 +19,15 @@ namespace CosmosKernel1
         public override void _Update()
         {
             KeyEvent keyEvent;
-            if(KeyboardManager.TryReadKey(out keyEvent)) 
+            if (KeyboardManager.TryReadKey(out keyEvent))
             {
-                switch (keyEvent.Key) 
+                switch (keyEvent.Key)
                 {
                     case ConsoleKeyEx.Enter:
                         this.text += "\n";
                         break;
                     case ConsoleKeyEx.Backspace:
-                        if (this.text.Length != 0) 
+                        if (this.text.Length != 0)
                         {
                             this.text = this.text.Remove(this.text.Length - 1);
                         }
@@ -40,7 +40,7 @@ namespace CosmosKernel1
 
             Kernel.vMWareSVGAII.DoubleBuffer_DrawFillRectangle(x, y, width, height, (uint)Color.Black.ToArgb());
 
-            if(text.Length != 0) 
+            if (text.Length != 0)
             {
                 string s = string.Empty;
                 int i = 0;
@@ -60,7 +60,7 @@ namespace CosmosKernel1
 
                 Kernel.vMWareSVGAII._DrawACSIIString(s, (uint)Color.White.ToArgb(), x, y);
             }
-            else 
+            else
             {
                 Kernel.vMWareSVGAII._DrawACSIIString("Edit anything you want", (uint)Color.Gray.ToArgb(), x, y);
             }

@@ -1,5 +1,6 @@
 ﻿using Cosmos.Core;
 using Cosmos.HAL;
+using Cosmos.System.Graphics;
 using System;
 
 namespace CosmosKernel1
@@ -468,15 +469,15 @@ namespace CosmosKernel1
         /// <summary>
         /// Height.
         /// </summary>
-        private uint height;
+        public uint height { get; private set; }
         /// <summary>
         /// Width.
         /// </summary>
-        private uint width;
+        public uint width { get; private set; }
         /// <summary>
         /// Depth.
         /// </summary>
-        private uint depth;
+        public uint depth;
         /// <summary>
         /// Capabilities.
         /// </summary>
@@ -829,8 +830,8 @@ namespace CosmosKernel1
         }
         */
 
-        uint FrameSize;
-        uint FrameOffset;
+        public uint FrameSize;
+        public uint FrameOffset;
 
         private void Init()
         {
@@ -846,9 +847,10 @@ namespace CosmosKernel1
             }
         }
 
-        public void DoubleBuffer_SetVRAM(int[] colors)
+        public void DoubleBuffer_SetVRAM(int[] colors, int Offset)
         {
-            Video_Memory.Copy((int)FrameSize, colors, 0, colors.Length);
+            //Video_Memory.Copy((int)FrameSize, colors, 0, colors.Length);
+            Video_Memory.Copy(Offset, colors, 0, colors.Length);
         }
 
         public void DoubleBuffer_Clear(uint color)
@@ -987,6 +989,17 @@ namespace CosmosKernel1
             x2 = (int)x2_out; y2 = (int)y2_out;
         }
 
+        public virtual void DoubleBuffer_DrawImage(Image image, uint x, uint y)
+        {
+            for (uint _x = 0; _x < image.Width; _x++)
+            {
+                for (uint _y = 0; _y < image.Height; _y++)
+                {
+                    DoubleBuffer_SetPixel(x + _x, y + _y, (uint)image.rawData[_x + _y * image.Width]);
+                }
+            }
+        }
+
         public virtual void DoubleBuffer_DrawLine(uint color, int x1, int y1, int x2, int y2)
         {
             // trim the given line to fit inside the canvas boundries
@@ -1011,6 +1024,39 @@ namespace CosmosKernel1
 
             /* the line is neither horizontal neither vertical, is diagonal then! */
             DrawDiagonalLine(color, dx, dy, x1, y1);
+        }
+
+        public virtual void DoubleBuffer_DrawRectangle(uint color, int x, int y, int width, int height)
+        {
+            /* The check of the validity of x and y are done in DrawLine() */
+
+            /* The vertex A is where x,y are */
+            int xa = x;
+            int ya = y;
+
+            /* The vertex B has the same y coordinate of A but x is moved of width pixels */
+            int xb = x + width;
+            int yb = y;
+
+            /* The vertex C has the same x coordiate of A but this time is y that is moved of height pixels */
+            int xc = x;
+            int yc = y + height;
+
+            /* The Vertex D has x moved of width pixels and y moved of height pixels */
+            int xd = x + width;
+            int yd = y + height;
+
+            /* Draw a line betwen A and B */
+            DoubleBuffer_DrawLine(color, xa, ya, xb, yb);
+
+            /* Draw a line between A and C */
+            DoubleBuffer_DrawLine(color, xa, ya, xc, yc);
+
+            /* Draw a line between B and D */
+            DoubleBuffer_DrawLine(color, xb, yb, xd, yd);
+
+            /* Draw a line between C and D */
+            DoubleBuffer_DrawLine(color, xc, yc, xd, yd);
         }
 
         private void DrawDiagonalLine(uint color, int dx, int dy, int x1, int y1)
