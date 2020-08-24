@@ -1,5 +1,5 @@
 # Importance Note
-If you want to run this. you have to go to "C:\Users\your user name\AppData\Roaming\Cosmos User Kit\Build\VMware\Workstation" and replace the Filesystem.vmdk with my Filesystem.vmdk
+You should add file to C:\Users\nifan\AppData\Roaming\Cosmos User Kit\Build\VMware\Workstation\filesystem.vmdk as i used. if you don't do that. system will except
 
 # Cosmos-GUI-Sample
 not better gio is better gui  
