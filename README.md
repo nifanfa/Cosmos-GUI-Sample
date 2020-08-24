@@ -1,5 +1,5 @@
 # Importance Note
-You should add file to C:\Users\nifan\AppData\Roaming\Cosmos User Kit\Build\VMware\Workstation\filesystem.vmdk as i used. if you don't do that. system will except
+Add those files which is tagged by "Add To Filesystem.vmdk" to C:\Users\nifan\AppData\Roaming\Cosmos User Kit\Build\VMware\Workstation\filesystem.vmdk 
 
 # Cosmos-GUI-Sample
 not better gio is better gui  
