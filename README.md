@@ -1,8 +1,7 @@
 ![image](https://github.com/nifanfa/Cosmos-GUI-Sample/blob/master/4.gif)  
 
-Buggy
-
 # Importance Note
+For some unknow reason this project can't run correctly and i won't fix it.
 Add those files which is tagged by "Add To Filesystem.vmdk" to C:\Users\nifan\AppData\Roaming\Cosmos User Kit\Build\VMware\Workstation\filesystem.vmdk 
 
 # Cosmos-GUI-Sample
