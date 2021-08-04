@@ -1,3 +1,6 @@
+# All my cosmos project have adbandoned. use MOSA-Core instead
+#
+
 ![image](https://github.com/nifanfa/Cosmos-GUI-Sample/blob/master/4.gif)  
 
 # Importance Note
