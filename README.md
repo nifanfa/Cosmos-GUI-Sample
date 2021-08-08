@@ -4,7 +4,7 @@
 ![image](https://github.com/nifanfa/Cosmos-GUI-Sample/blob/master/4.gif)  
 
 # Importance Note
-I'm not sure the wallpaper will be loaded correctly. Cosmos Filesystem are not stable.  
+# Note: Cosmos has serious memory problem. Such a GUI will crash in a few minute even worse. Second. Cosmos's filesystem is buggy. i'm sure the file won't be loaded correctly.
 Add those files which is tagged by "Add To Filesystem.vmdk" to C:\Users\Your User Name\AppData\Roaming\Cosmos User Kit\Build\VMware\Workstation\filesystem.vmdk 
 
 # Cosmos-GUI-Sample
