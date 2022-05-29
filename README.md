@@ -1,5 +1,5 @@
 ## All my cosmos project have adbandoned. use MOOS  
-### One of my MOSA-Core demo [Here](https://github.com/nifanfa/MOSA-GUI-Sample)
+### Navigate to MOOS [Here](https://github.com/nifanfa/MOOS)
 
 ![image](https://github.com/nifanfa/Cosmos-GUI-Sample/blob/master/4.gif)  
 
